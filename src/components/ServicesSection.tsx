@@ -8,7 +8,7 @@ const services = [
     title: "Demat & Trading Account",
     desc: "Open your free Demat account with Dhan — India's fastest trading platform. Trade in Stocks, F&O, Commodities with advanced charting tools and zero opening charges.",
     isDhan: true,
-    link: "https://tinyurl.com/2aezm7r2",
+    link: "https://invite.dhan.co/?join=DIV111",
   },
   {
     num: "02",
