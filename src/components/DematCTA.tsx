@@ -18,7 +18,7 @@ const DematCTA = () => {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a
-            href="https://tinyurl.com/2aezm7r2"
+            href="https://invite.dhan.co/?join=DIV111"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-dhan-teal hover:bg-dhan-teal/80 text-primary-foreground font-heading font-bold px-6 py-3 rounded-full transition-colors"

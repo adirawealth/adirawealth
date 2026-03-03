@@ -61,7 +61,7 @@ const Navbar = () => {
             </span>
           </div>
           <a
-            href="https://tinyurl.com/2aezm7r2"
+            href="https://invite.dhan.co/?join=DIV111"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-bright-green hover:bg-emerald text-primary-foreground font-heading font-bold text-sm px-5 py-2 rounded-full transition-colors"
@@ -93,7 +93,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="https://tinyurl.com/2aezm7r2"
+            href="https://invite.dhan.co/?join=DIV111"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 block text-center bg-bright-green text-primary-foreground font-heading font-bold text-sm px-5 py-3 rounded-full"

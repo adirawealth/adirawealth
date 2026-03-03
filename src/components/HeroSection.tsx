@@ -94,7 +94,7 @@ const HeroSection = () => {
               </div>
 
               <a
-                href="https://tinyurl.com/2aezm7r2"
+                href="https://invite.dhan.co/?join=DIV111"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center bg-dhan-teal hover:bg-dhan-teal/80 text-primary-foreground font-heading font-bold px-6 py-3 rounded-xl transition-colors"
