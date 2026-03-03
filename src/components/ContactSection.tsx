@@ -1,6 +1,8 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollReveal();
@@ -13,13 +15,28 @@ const ContactSection = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Enquiry from ${formData.firstName} ${formData.lastName}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.firstName} ${formData.lastName}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nService: ${formData.service}\nMessage: ${formData.message}`
-    );
-    window.open(`mailto:adirawealth@gmail.com?subject=${subject}&body=${body}`);
+    setSubmitting(true);
+
+    const { error } = await supabase.from("contact_submissions").insert({
+      first_name: formData.firstName.trim(),
+      last_name: formData.lastName.trim(),
+      phone: formData.phone.trim(),
+      email: formData.email.trim(),
+      service: formData.service,
+      message: formData.message.trim() || null,
+    });
+
+    if (error) {
+      toast.error("Something went wrong. Please try again.");
+    } else {
+      toast.success("Thank you! We'll get back to you shortly.");
+      setFormData({ firstName: "", lastName: "", phone: "", email: "", service: "", message: "" });
+    }
+    setSubmitting(false);
   };
 
   return (
@@ -133,9 +150,10 @@ const ContactSection = () => {
             />
             <button
               type="submit"
-              className="w-full bg-emerald hover:bg-bright-green text-primary-foreground font-heading font-bold py-3 rounded-xl transition-colors"
+              disabled={submitting}
+              className="w-full bg-emerald hover:bg-bright-green text-primary-foreground font-heading font-bold py-3 rounded-xl transition-colors disabled:opacity-50"
             >
-              Send Message
+              {submitting ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
