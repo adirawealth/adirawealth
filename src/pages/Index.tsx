@@ -5,7 +5,7 @@ import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import DematCTA from "@/components/DematCTA";
-import ContactSection from "@/components/ContactSection";
+
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -19,7 +19,7 @@ const Index = () => {
       <ServicesSection />
       <WhyChooseUs />
       <DematCTA />
-      <ContactSection />
+      
       <Footer />
       <WhatsAppButton />
     </div>
