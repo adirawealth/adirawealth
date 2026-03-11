@@ -19,6 +19,13 @@
   <meta name="twitter:title" content="Adira Wealth — Smart Growth · Secure Future | Rajkot">
   <meta property="og:description" content="Adira Wealth is a trusted wealth management company in Rajkot, Gujarat. Super Authorized Partner of Dhan Broking. Demat, Insurance, Mutual Funds, PMS &amp; Algo.">
   <meta name="twitter:description" content="Adira Wealth is a trusted wealth management company in Rajkot, Gujarat. Super Authorized Partner of Dhan Broking. Demat, Insurance, Mutual Funds, PMS &amp; Algo.">
+	<script>
+  var redirect = sessionStorage.getItem('redirect');
+  if (redirect) {
+    sessionStorage.removeItem('redirect');
+    window.history.replaceState(null, null, redirect);
+  }
+</script>
   <script type="module" crossorigin src="/adirawealth/assets/index-C6tZclFY.js"></script>
   <link rel="stylesheet" crossorigin href="/adirawealth/assets/index-DzzhBeDQ.css">
 </head>
